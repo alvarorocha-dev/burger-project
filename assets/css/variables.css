@@ -6,7 +6,7 @@ Variables
 
 :root {
   /* =========> Typography */
-  --first-ff: "EB Garamond", serif;
+  --first-ff: "Roboto", sans-serif;
   --second-ff: "Montserrat", sans-serif;
 
   /* =========> Colors */
@@ -159,7 +159,6 @@ Global Styles
   border: 2px solid var(--second-clr-dark);
   border-radius: 0.5rem;
   padding: 1rem 2rem;
-  letter-spacing: var(--spacing);
   display: inline-block;
   font: 600 1.8rem/1.5 var(--first-ff);
   transition: var(--transition);

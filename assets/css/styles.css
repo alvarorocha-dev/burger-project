@@ -4,7 +4,7 @@ Fonts
 ===============
 */
 
-@import url("https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 
 /*
 =============== 
@@ -43,9 +43,6 @@ Navbar
 */
 
 .navbar {
-  position: fixed;
-  top: 0;
-  left: 0;
   width: 100%;
   background: var(--white-clr);
   box-shadow: var(--dark-shadow);
