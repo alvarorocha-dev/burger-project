@@ -38,6 +38,71 @@ Global Styles
 
 /*
 =============== 
+Topbar
+===============
+*/
+
+#topbar {
+  background: var(--off-black-clr);
+}
+
+.topbar {
+  padding: 0.5rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem 1.5rem;
+}
+
+.first-column {
+  display: flex;
+  gap: 1rem;
+}
+
+.top-link {
+  color: white;
+  transition: var(--transition);
+}
+
+.top-link:hover {
+  color: var(--second-clr-dark);
+}
+
+.top-item {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.social-icons {
+  display: flex;
+  gap: 1rem;
+}
+
+.social-icon {
+  color: var(--white-clr);
+  font-size: 2rem;
+  transition: var(--transition);
+}
+
+.social-icon:hover {
+  color: var(--second-clr-dark);
+}
+
+.top-search input {
+  outline: none;
+  border: 2px solid var(--second-clr-dark);
+  border-radius: 0.5rem;
+  padding: 0.2rem .5rem;
+  font: inherit;
+}
+
+.top-search input::placeholder {
+  font: inherit;
+}
+
+/*
+=============== 
 Navbar
 ===============
 */
@@ -49,12 +114,23 @@ Navbar
   z-index: 999;
 }
 
-.nav-icons {
-  display: none;
+/* .nav-icons {
+  display: flex;
+  gap: 1rem;
 }
 
+.nav-icon {
+  color: var(--white-clr);
+  font-size: 2rem;
+  transition: var(--transition);
+}
+
+.nav-icon:hover {
+  color: var(--second-clr-dark);
+} */
+
 .nav-logo {
-  width: 15rem;
+  width: 10rem;
 }
 
 .nav-center {
@@ -105,8 +181,22 @@ Navbar
 }
 
 .show-links {
-  height: 230px;
+  height: 630px;
 }
+
+.orders {
+  padding: 1rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.order-btn {
+  padding: .5rem 1rem;
+  font-size: 1.4rem;
+}
+
+
 
 @media screen and (min-width: 992px) {
   .nav-toggle {
@@ -118,11 +208,13 @@ Navbar
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
+    border: 2px solid red;
   }
 
   .nav-links {
     height: auto;
     display: flex;
+    align-items: center;
   }
 
   .nav-header {
@@ -140,19 +232,9 @@ Navbar
     background: transparent;
   }
 
-  .nav-icons {
-    display: flex;
-    gap: 1rem;
-  }
-
-  .nav-icon {
-    color: var(--first-clr-dark);
-    font-size: 2rem;
-    transition: var(--transition);
-  }
-
-  .nav-icon:hover {
-    color: var(--second-clr-dark);
+  .orders {
+    padding: 0;
+    flex-direction: row;
   }
 }
 
