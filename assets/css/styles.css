@@ -55,8 +55,9 @@ Topbar
   gap: 0.5rem 1.5rem;
 }
 
-.first-column {
+.last-column {
   display: flex;
+  flex-wrap: wrap;
   gap: 1rem;
 }
 
@@ -67,11 +68,6 @@ Topbar
 
 .top-link:hover {
   color: var(--second-clr-dark);
-}
-
-.top-item {
-  display: flex;
-  gap: 0.5rem;
 }
 
 .social-icons {
@@ -106,6 +102,12 @@ Topbar
   font: inherit;
 }
 
+@media screen and (max-width: 650px) {
+  .top-search {
+    display: none;
+  }
+}
+
 /*
 =============== 
 Navbar
@@ -124,8 +126,7 @@ Navbar
 }
 
 .nav-center {
-  width: 100%;
-  max-width: 1180px;
+  width: min(90dvw, 1180px);
   margin: 0 auto;
 }
 
@@ -172,7 +173,7 @@ Navbar
 }
 
 .show-links {
-  height: 300px;
+  height: 330px;
 }
 
 .orders {
@@ -187,7 +188,32 @@ Navbar
   font-size: 1.4rem;
 }
 
-@media screen and (min-width: 992px) {
+#menu-search {
+  display: block;
+}
+
+#menu-search input {
+  border-color: var(--off-black-clr);
+  transition: var(--transition);
+}
+
+#menu-search input:focus-visible {
+  border: 2px solid var(--second-clr-dark);
+}
+
+#menu-search .social-icon {
+  color: black;
+}
+
+#menu-search .social-icon:hover {
+  color: var(--second-clr-dark);
+}
+
+@media screen and (min-width: 800px) {
+  .nav-logo {
+    width: 8rem;
+  }
+
   .nav-toggle {
     display: none;
   }
@@ -223,6 +249,11 @@ Navbar
   .orders {
     padding: 0;
     flex-direction: row;
+    margin-left: 1rem;
+  }
+
+  #menu-search {
+    display: none;
   }
 }
 
@@ -233,8 +264,8 @@ Hero
 */
 
 .hero {
-  min-height: 85vh;
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1)),
+  min-height: 87vh;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)),
     url("../images/home-hero-bg.jpg") no-repeat center/cover;
   display: flex;
   justify-content: center;
@@ -253,6 +284,7 @@ Hero
   text-shadow: var(--text-shadow);
   font-size: 5rem;
   font-weight: 900;
+  line-height: 1.1;
 }
 
 .hero-banner p {
@@ -267,18 +299,21 @@ Hero
 .hero-btn {
   padding: 1rem 1.8rem;
   font-size: 1.8rem;
-  background: var(--clr-white);
-  color: var(--clr-primary-5);
+  background: var(--white-clr);
+  color: var(--first-clr-dark);
+  border-color: var(--white-clr);
 }
 
 .hero-btn:hover {
-  background: transparent;
-  color: var(--clr-white);
-  border-color: var(--clr-white);
+  background: var(--first-clr-dark);
+  color: var(--second-clr-dark);
+  border-color: var(--first-clr-dark);
 }
 
 @media screen and (min-width: 768px) {
   .hero {
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1)),
+      url("../images/home-hero-bg.jpg") no-repeat center/cover;
     background-attachment: fixed;
     min-height: 90vh;
     justify-content: flex-start;
@@ -302,22 +337,86 @@ Hero
 
 /*
 =============== 
-Sections
+Featured
 ===============
 */
 
-#section-01 {
-  min-height: 100dvh;
+.featured {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+}
+
+.featured-item {
+  border: 1px solid var(--light-grey);
+  border-bottom: 2px solid var(--light-grey);
+  border-top: none;
+  padding: 6rem 4rem;
+  transition: var(--transition);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.featured-item:hover {
   background: var(--second-clr-dark);
 }
 
-#section-01 h1 {
-  color: var(--first-clr-dark);
+.featured-item:hover .img-featured {
+  transform: scale(1.08);
+  rotate: 2deg;
 }
 
-#section-02 {
-  min-height: 100dvh;
-  background: var(--first-clr-dark);
+.featured-item:hover .featured-title {
+  color: var(--white-clr);
+}
+
+.featured-item:hover .featured-btn {
+  background: var(--white-clr);
+  border-color: transparent;
+}
+
+.featured-item:hover .featured-btn:hover {
+  background: var(--first-clr-light);
+}
+
+.img-featured {
+  transition: var(--transition);
+  margin: 0 auto;
+  margin-bottom: 3rem;
+  width: 20rem;
+}
+
+.featured-title {
+  transition: var(--transition);
+  margin-bottom: 2rem;
+}
+
+.featured-btn {
+  align-self: center;
+}
+
+@media screen and (min-width: 700px) {
+  .featured {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(280px, 1fr));
+  }
+}
+@media screen and (min-width: 1000px) {
+  .featured {
+    grid-template-columns: repeat(3, minmax(280px, 1fr));
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  .featured {
+    grid-template-columns: repeat(6, minmax(260px, 1fr));
+  }
+
+  .img-featured {
+    height: 16rem;
+    width: auto;
+  }
 }
 
 /*

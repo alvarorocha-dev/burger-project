@@ -21,6 +21,7 @@ Variables
   --black-clr: #000;
   --off-black-clr: #0e1514;
   --text-clr: #292828;
+  --light-grey: #d3d3d3;
   --gold-gradient: linear-gradient(
     180deg,
     rgba(214, 153, 25, 0.8) 10%,
