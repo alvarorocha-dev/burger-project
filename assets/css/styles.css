@@ -91,10 +91,15 @@ Topbar
 
 .top-search input {
   outline: none;
-  border: 2px solid var(--second-clr-dark);
+  border: 2px solid var(--white-clr);
   border-radius: 0.5rem;
-  padding: 0.2rem .5rem;
+  padding: 0.1rem 0.5rem;
   font: inherit;
+  margin-left: 0.3rem;
+}
+
+.top-search input:focus-visible {
+  border: 2px solid var(--second-clr-dark);
 }
 
 .top-search input::placeholder {
@@ -114,23 +119,8 @@ Navbar
   z-index: 999;
 }
 
-/* .nav-icons {
-  display: flex;
-  gap: 1rem;
-}
-
-.nav-icon {
-  color: var(--white-clr);
-  font-size: 2rem;
-  transition: var(--transition);
-}
-
-.nav-icon:hover {
-  color: var(--second-clr-dark);
-} */
-
 .nav-logo {
-  width: 10rem;
+  width: 7rem;
 }
 
 .nav-center {
@@ -164,6 +154,7 @@ Navbar
   color: var(--first-clr-dark);
   text-transform: capitalize;
   padding: 1rem 2rem;
+  font-weight: 600;
   display: block;
   transition: var(--transition);
 }
@@ -181,7 +172,7 @@ Navbar
 }
 
 .show-links {
-  height: 630px;
+  height: 300px;
 }
 
 .orders {
@@ -192,11 +183,9 @@ Navbar
 }
 
 .order-btn {
-  padding: .5rem 1rem;
+  padding: 0.5rem 1rem;
   font-size: 1.4rem;
 }
-
-
 
 @media screen and (min-width: 992px) {
   .nav-toggle {
@@ -208,7 +197,6 @@ Navbar
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    border: 2px solid red;
   }
 
   .nav-links {
@@ -245,7 +233,7 @@ Hero
 */
 
 .hero {
-  min-height: 100vh;
+  min-height: 85vh;
   background: linear-gradient(180deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1)),
     url("../images/home-hero-bg.jpg") no-repeat center/cover;
   display: flex;
@@ -261,8 +249,10 @@ Hero
 
 .hero-banner h1 {
   text-transform: uppercase;
-  color: var(--white-clr);
+  color: var(--second-clr-dark);
   text-shadow: var(--text-shadow);
+  font-size: 5rem;
+  font-weight: 900;
 }
 
 .hero-banner p {
@@ -270,7 +260,8 @@ Hero
   margin: 2rem auto;
   color: var(--clr-white);
   font-size: 1.8rem;
-  letter-spacing: var(--spacing);
+  font-weight: 700;
+  text-shadow: var(--text-shadow-mini);
 }
 
 .hero-btn {
@@ -289,14 +280,23 @@ Hero
 @media screen and (min-width: 768px) {
   .hero {
     background-attachment: fixed;
+    min-height: 90vh;
+    justify-content: flex-start;
   }
 
   .hero-banner {
     padding: 0;
+    text-align: left;
+  }
+
+  .hero-banner h1 {
+    max-width: 13ch;
   }
 
   .hero-banner p {
     max-width: 45rem;
+    text-align: left;
+    margin: 2rem 0;
   }
 }
 
