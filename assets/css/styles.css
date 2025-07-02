@@ -413,6 +413,10 @@ Featured
     grid-template-columns: repeat(6, minmax(260px, 1fr));
   }
 
+  .featured-item {
+    padding: 10rem 4rem;
+  }
+
   .img-featured {
     height: 16rem;
     width: auto;
