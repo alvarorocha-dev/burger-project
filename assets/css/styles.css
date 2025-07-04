@@ -425,6 +425,63 @@ Featured
 
 /*
 =============== 
+About
+===============
+*/
+
+#about {
+  background: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.85),
+      rgba(255, 255, 255, 0.85)
+    ),
+    url("../images/about-background.jpg") fixed;
+}
+
+.about {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.about-img-container {
+  margin: 0 auto 6rem auto;
+}
+
+.about-img {
+  width: 25rem;
+}
+.section-intro {
+  color: var(--first-clr-dark);
+}
+
+.section-title {
+  color: var(--text-clr);
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: 3rem;
+}
+
+.about-item {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  margin-top: 1rem;
+}
+
+.about-icon {
+  color: var(--first-clr-light);
+  font-size: 3rem;
+  margin-right: 1.5rem;
+}
+
+.about-text {
+  font-size: 2rem;
+  line-height: 1;
+  color: var(--text-clr);
+}
+
+/*
+=============== 
 Boneco
 ===============
 */
