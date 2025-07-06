@@ -594,6 +594,126 @@ Featured Cards
 
 /*
 =============== 
+Best Selling Dishes
+===============
+*/
+
+.dishes-box {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 3rem;
+  margin-top: 4rem;
+}
+
+.dish-item {
+  padding: 6rem 3rem;
+  box-shadow: var(--box-shadow-light);
+  border-radius: 1rem;
+  transition: var(--transition);
+  display: flex;
+  flex-direction: column;
+}
+
+.dish-item:hover {
+  box-shadow: var(--box-shadow-dark);
+}
+
+.dish-item:hover .dish-img {
+  transform: scale(1.105);
+  rotate: 2deg;
+}
+
+.dish-item:hover .dish-title {
+  color: var(--third-clr-dark);
+}
+
+.dish-item:hover .dish-cart-icon {
+  background: var(--third-clr-dark);
+}
+
+.dish-item:hover .dish-title-icon {
+  color: var(--first-clr-dark);
+}
+
+.dish-img {
+  width: 20rem;
+  margin: 0 auto;
+  transition: var(--transition);
+}
+
+.dish-title-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 3.5rem 0 1.5rem;
+}
+
+.dish-title {
+  color: var(--text-clr);
+  line-height: 1;
+  transition: var(--transition);
+  margin: 0;
+}
+
+.dish-title-icon {
+  color: var(--second-clr-dark);
+  transition: var(--transition);
+  font-size: 2rem;
+}
+
+.dish-ratings {
+  color: var(--second-clr-dark);
+  margin-bottom: 1rem;
+}
+
+.price-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+}
+
+.dish-price {
+  color: var(--first-clr-dark);
+  font-weight: 800;
+  font-size: 2.5rem;
+  margin: 0;
+}
+
+.dish-cart-icon {
+  background: var(--first-clr-dark);
+  color: var(--white-clr);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  font-size: 2rem;
+  transition: var(--transition);
+}
+
+.dish-cart-icon:hover {
+  background: var(--second-clr-dark) !important;
+  color: var(--first-clr-dark);
+}
+
+/* @media screen and (min-width: 900px) {
+  .dishes-box {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  }
+} */
+
+@media screen and (min-width: 700px) {
+  .dishes-box {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+
+  .dish-title {
+    font-size: 1.7rem;
+  }
+}
+
+/*
+=============== 
 Boneco
 ===============
 */

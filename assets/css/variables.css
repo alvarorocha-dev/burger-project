@@ -14,8 +14,8 @@ Variables
   --first-clr-dark: #dd131e;
   --second-clr-light: #fbd968;
   --second-clr-dark: #fab440;
-  --third-clr-light: #1a218a;
-  --third-clr-dark: #4e47c6;
+  --third-clr-light: #83b10b;
+  --third-clr-dark: #316c22;
   --white-clr: #fff;
   --off-white-clr: #faf9f6;
   --black-clr: #000;
@@ -39,6 +39,8 @@ Variables
   --spacing: 0.25rem;
   --radius: 0.5rem;
   --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  --box-shadow-light: 0 5px 15px rgba(0, 0, 0, 0.2);
+  --box-shadow-dark: 0 5px 15px rgba(0, 0, 0, 0.5);
   --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
   --text-shadow: 2px 2px rgba(0, 0, 0, 0.9);
   --text-shadow-mini: 1px 1px rgba(0, 0, 0, 0.9);
@@ -174,7 +176,7 @@ Global Styles
 
 @media screen and (max-width: 768px) {
   .container {
-    padding: 8rem 0;
+    padding: 15rem 0;
   }
 }
 
