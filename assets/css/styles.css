@@ -726,6 +726,61 @@ Best Selling Dishes
 
 /*
 =============== 
+Banner
+===============
+*/
+
+#banner {
+  background: url("../images/banner-bg.jpg") no-repeat center/cover;
+}
+
+.banner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8rem;
+}
+
+.banner-img-container {
+  text-align: center;
+  margin: 0 auto;
+  width: 50%;
+}
+
+.banner-content {
+  text-align: center;
+}
+
+.banner h2 {
+  color: var(--second-clr-dark);
+}
+
+.banner p {
+  color: var(--white-clr);
+}
+
+.white-span {
+  color: var(--white-clr);
+}
+
+@media screen and (min-width: 850px) {
+  .banner {
+    flex-wrap: nowrap;
+    min-height: 80dvh;
+    justify-content: space-around;
+  }
+
+  .banner-content {
+    width: 30%;
+  }
+
+  .banner-img-container {
+    width: 40%;
+  }
+}
+
+/*
+=============== 
 Boneco
 ===============
 */
