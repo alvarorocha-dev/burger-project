@@ -429,7 +429,9 @@ About
 ===============
 */
 
-#about {
+#about,
+#numbers,
+#testimonial {
   background: linear-gradient(
       90deg,
       rgba(255, 255, 255, 0.85),
@@ -777,6 +779,49 @@ Banner
   .banner-img-container {
     width: 40%;
   }
+}
+
+/*
+=============== 
+Numbers
+===============
+*/
+
+/*
+=============== 
+Testimonial
+===============
+*/
+
+.single-testimonial {
+  text-align: center;
+}
+
+.testimonial-seal {
+  width: 10rem;
+  margin: 0 auto 1.5rem;
+}
+
+.testimonial-txt {
+  font-weight: 700;
+  opacity: 0.7;
+}
+
+.testimonial-name {
+  color: var(--first-clr-dark);
+  text-transform: uppercase;
+  font-size: 1.9rem;
+}
+
+.position {
+  color: var(--text-clr);
+}
+
+.img-profile {
+  border: 4px solid var(--second-clr-dark);
+  border-radius: 100%;
+  width: 12rem;
+  margin: 1.5rem auto 0;
 }
 
 /*
