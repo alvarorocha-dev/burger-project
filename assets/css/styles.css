@@ -755,6 +755,7 @@ Banner
 
 .banner h2 {
   color: var(--second-clr-dark);
+  text-shadow: var(--text-shadow-mini);
 }
 
 .banner p {
@@ -787,11 +788,41 @@ Numbers
 ===============
 */
 
+#numbers .section-title {
+  max-width: 15ch;
+}
+
+.numbers-img {
+  margin: 0 auto;
+  width: 35rem;
+}
+
+.about-number {
+  color: var(--first-clr-dark);
+  font-weight: 900;
+  font-size: 4rem;
+  margin-right: 0.5rem;
+}
+
+@media screen and (min-width: 992px) {
+  .numbers-img {
+    width: 100%;
+  }
+
+  .about-number {
+    font-size: 5rem;
+  }
+}
+
 /*
 =============== 
 Testimonial
 ===============
 */
+
+.testimonial {
+  padding-top: 5rem;
+}
 
 .single-testimonial {
   text-align: center;
@@ -805,6 +836,9 @@ Testimonial
 .testimonial-txt {
   font-weight: 700;
   opacity: 0.7;
+  max-width: 60ch;
+  text-align: center;
+  margin: 1.5rem auto;
 }
 
 .testimonial-name {
@@ -822,6 +856,118 @@ Testimonial
   border-radius: 100%;
   width: 12rem;
   margin: 1.5rem auto 0;
+}
+
+/*
+=============== 
+Promo
+===============
+*/
+
+.promo-box {
+  padding: 0 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(7, 30dvh);
+  gap: 1rem;
+  background: #000;
+  grid-template-areas:
+    "promo-01"
+    "promo-02"
+    "promo-03"
+    "promo-04"
+    "promo-05"
+    "promo-06"
+    "promo-07";
+}
+
+.promo {
+  border-radius: 1.5rem;
+  padding: 2rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
+    var(--place-img) center/cover no-repeat;
+  transition: var(--transition);
+  filter: brightness(60%);
+}
+
+.promo:hover {
+  filter: none;
+}
+
+.promo:hover .promo-info {
+  display: block;
+  opacity: 1;
+}
+
+.promo-info {
+  color: var(--white-clr);
+  text-shadow: var(--text-shadow-mini);
+  opacity: 0;
+  transition: var(--transition);
+  background: rgba(0, 0, 0, 0.8);
+  padding: 0.5rem 1.5rem;
+  border-radius: 0.5rem;
+}
+
+@media screen and (min-width: 768px) {
+  .promo-box {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(6, 30dvh);
+    gap: 0.5rem;
+    grid-template-areas:
+      "promo-01 promo-02"
+      "promo-03 promo-04"
+      "promo-05 promo-06"
+      "promo-07 promo-07";
+  }
+}
+@media screen and (min-width: 1150px) {
+  .promo-box {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(6, 17dvh);
+    gap: 1rem;
+    grid-template-areas:
+      "promo-01 promo-02 promo-06 promo-06"
+      "promo-01 promo-02 promo-06 promo-06"
+      "promo-03 promo-03 promo-06 promo-06"
+      "promo-03 promo-03 promo-07 promo-07"
+      "promo-04 promo-05 promo-07 promo-07"
+      "promo-04 promo-05 promo-07 promo-07";
+  }
+}
+
+.promo-01 {
+  grid-area: promo-01;
+  --place-img: url("../images/promos/promo-01.jpg");
+}
+.promo-02 {
+  grid-area: promo-02;
+  --place-img: url("../images/promos/promo-03.jpg");
+}
+.promo-03 {
+  grid-area: promo-03;
+  --place-img: url("../images/promos/promo-03.jpg");
+}
+.promo-04 {
+  grid-area: promo-04;
+  --place-img: url("../images/promos/promo-03.jpg");
+}
+.promo-05 {
+  grid-area: promo-05;
+  --place-img: url("../images/promos/promo-03.jpg");
+}
+.promo-06 {
+  grid-area: promo-06;
+  --place-img: url("../images/promos/promo-06.jpg");
+}
+.promo-07 {
+  grid-area: promo-07;
+  --place-img: url("../images/promos/promo-03.jpg");
 }
 
 /*
