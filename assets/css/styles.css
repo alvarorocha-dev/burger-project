@@ -431,7 +431,8 @@ About
 
 #about,
 #numbers,
-#testimonial {
+#testimonial,
+#newsletter {
   background: linear-gradient(
       90deg,
       rgba(255, 255, 255, 0.85),
@@ -738,7 +739,7 @@ Banner
 
 .banner {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   align-items: center;
   gap: 8rem;
 }
@@ -766,9 +767,17 @@ Banner
   color: var(--white-clr);
 }
 
+.newsletter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8rem;
+}
+
 @media screen and (min-width: 850px) {
   .banner {
     flex-wrap: nowrap;
+    flex-direction: row;
     min-height: 80dvh;
     justify-content: space-around;
   }
@@ -821,7 +830,7 @@ Testimonial
 */
 
 .testimonial {
-  padding-top: 5rem;
+  padding-top: 2rem;
 }
 
 .single-testimonial {
@@ -865,12 +874,12 @@ Promo
 */
 
 .promo-box {
-  padding: 0 1.5rem;
+  padding: 2rem 1.5rem;
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   grid-template-rows: repeat(7, 32dvh);
   gap: 1rem;
-  background: #000;
+  background: var(--white-clr);
   grid-template-areas:
     "promo-01"
     "promo-02"
@@ -889,7 +898,7 @@ Promo
   align-items: flex-end;
   background: var(--place-img) center/cover no-repeat;
   transition: var(--transition);
-  filter: brightness(70%);
+  filter: brightness(50%);
 }
 
 .promo:hover {
@@ -909,13 +918,14 @@ Promo
   background: rgba(0, 0, 0, 0.8);
   padding: 0.5rem 1.5rem;
   border-radius: 0.5rem;
+  line-height: 1.2;
 }
 
 @media screen and (min-width: 768px) {
   .promo-box {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(6, 32dvh);
+    grid-template-rows: repeat(4, 32dvh);
     gap: 0.5rem;
     grid-template-areas:
       "promo-01 promo-02"
@@ -924,6 +934,7 @@ Promo
       "promo-06 promo-07";
   }
 }
+
 @media screen and (min-width: 1150px) {
   .promo-box {
     display: grid;
@@ -967,6 +978,134 @@ Promo
 .promo-07 {
   grid-area: promo-07;
   --place-img: url("../images/promos/promo-07.jpg");
+}
+
+/*
+=============== 
+Newsletter
+===============
+*/
+
+.newsletter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8rem;
+}
+
+.news-content {
+  text-align: center;
+}
+
+.news-img-container {
+  width: 35%;
+}
+
+#newsletter p {
+  color: var(--text-clr);
+}
+
+#newsletter span {
+  color: var(--third-clr-dark);
+}
+
+#news-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
+}
+
+#news-form label {
+  font: 400 1.6rem/1.5 var(--first-ff);
+}
+
+#news-form .btn {
+  align-self: center;
+}
+
+#news-form input:not(.btn, .check) {
+  border: 2px solid var(--light-grey);
+  border-radius: 0.5rem;
+  padding: 0.75rem 1rem;
+  transition: var(--transition);
+  width: 70%;
+}
+
+#news-form input:focus-visible {
+  border: 2px solid var(--second-clr-dark);
+  box-shadow: var(--light-shadow);
+}
+
+#news-form::placeholder {
+  font: inherit;
+}
+
+.check {
+  margin-right: 0.5rem;
+}
+
+@media screen and (min-width: 768px) {
+  .news-img-container {
+    width: 40%;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .newsletter {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    min-height: 80dvh;
+    justify-content: space-around;
+    gap: 3rem;
+  }
+  .news-img-container {
+    width: 20%;
+  }
+  .news-content {
+    width: 60%;
+  }
+}
+
+/*
+=============== 
+Gallery
+===============
+*/
+
+#gallery {
+  padding: 5rem 1rem;
+}
+.gallery {
+  display: flex;
+  overflow-x: scroll;
+  gap: 0.5rem;
+  padding-bottom: 2rem;
+}
+
+.gallery-img {
+  width: 85dvw;
+  transition: var(--transition);
+  filter: sepia(80%);
+}
+
+.gallery-img:hover {
+  filter: none;
+}
+
+@media screen and (min-width: 768px) {
+  .gallery-img {
+    width: 55dvw;
+  }
+}
+@media screen and (min-width: 900px) {
+  .gallery-img {
+    width: 45dvw;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .gallery-img {
+    width: 35dvw;
+  }
 }
 
 /*

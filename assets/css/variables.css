@@ -184,3 +184,25 @@ Global Styles
 .container-mini {
   padding: 0;
 }
+
+input {
+  border: none;
+  outline: none;
+}
+
+/* ============== > Scrollbar Style */
+
+.gallery::-webkit-scrollbar {
+  height: 1rem;
+  background-color: transparent;
+}
+
+.gallery::-webkit-scrollbar-track {
+  background-color: var(--second-clr-light);
+  border-radius: 1rem;
+}
+
+.gallery::-webkit-scrollbar-thumb {
+  background: var(--second-clr-dark);
+  border-radius: 1rem;
+}
