@@ -735,6 +735,29 @@ Banner
 
 #banner {
   background: url("../images/banner-bg.jpg") no-repeat center/cover;
+  position: relative;
+}
+
+.banner::before {
+  content: "";
+  background: url("../images/banner-images/tomato-top.webp") no-repeat
+    center/cover;
+  position: absolute;
+  width: 25rem;
+  height: 20rem;
+  left: 1%;
+  top: -10%;
+}
+.banner::after {
+  content: "";
+  background: url("../images/banner-images/tomato-bottom.webp") no-repeat
+    center/cover;
+  position: absolute;
+  width: 25rem;
+  height: 20rem;
+  object-fit: cover;
+  right: 0;
+  bottom: -10%;
 }
 
 .banner {
