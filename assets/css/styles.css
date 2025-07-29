@@ -734,7 +734,7 @@ Banner
 */
 
 #banner {
-  background: url("../images/banner-bg.jpg") no-repeat center/cover;
+  background: var(--first-clr-light);
   position: relative;
 }
 
@@ -770,7 +770,7 @@ Banner
 .banner-img-container {
   text-align: center;
   margin: 0 auto;
-  width: 50%;
+  width: clamp(40%, 50%, 25rem);
 }
 
 .banner-content {
@@ -811,6 +811,12 @@ Banner
 
   .banner-img-container {
     width: 40%;
+  }
+
+  .banner::before,
+  .banner::after {
+    width: 30rem;
+    height: 25rem;
   }
 }
 
@@ -1096,7 +1102,8 @@ Gallery
 */
 
 #gallery {
-  padding: 5rem 1rem;
+  padding: 2rem 1rem;
+  background: var(--black-clr);
 }
 .gallery {
   display: flex;

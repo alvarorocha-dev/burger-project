@@ -203,6 +203,6 @@ input {
 }
 
 .gallery::-webkit-scrollbar-thumb {
-  background: var(--second-clr-dark);
+  background: var(--text-clr);
   border-radius: 1rem;
 }
