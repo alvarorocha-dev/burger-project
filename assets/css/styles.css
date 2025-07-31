@@ -735,7 +735,7 @@ Banner
 
 #banner {
   background: var(--first-clr-light);
-  position: relative;
+  position: relative;  
 }
 
 .banner::before {
