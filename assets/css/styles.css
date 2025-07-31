@@ -735,27 +735,23 @@ Banner
 
 #banner {
   background: var(--first-clr-light);
-  position: relative;  
+  position: relative;
 }
 
-.banner::before {
-  content: "";
-  background: url("../images/banner-images/tomato-top.webp") no-repeat
-    center/cover;
-  position: absolute;
-  width: 16rem;
-  height: 13rem;
-  left: 1%;
-  top: -5%;
-}
-.banner::after {
-  content: "";
-  background: url("../images/banner-images/tomato-bottom.webp") no-repeat
-    center/cover;
-  position: absolute;
-  width: 16rem;
-  height: 13rem;
+.banner-top-img,
+.banner-bottom-img {
+  max-width: 20rem;
+  height: auto;
   object-fit: cover;
+  position: absolute;
+}
+
+.banner-top-img {
+  top: -5%;
+  left: 0;
+}
+
+.banner-bottom-img {
   right: 0;
   bottom: -5%;
 }
@@ -797,14 +793,6 @@ Banner
   gap: 8rem;
 }
 
-@media screen and (min-width: 600px) {
-  .banner::before,
-  .banner::after {
-    width: 20rem;
-    height: 18rem;
-  }
-}
-
 @media screen and (min-width: 850px) {
   .banner {
     flex-wrap: nowrap;
@@ -821,18 +809,17 @@ Banner
     width: 40%;
   }
 
-  .banner::before {
-    top: -15%;
+  .banner-top-img,
+  .banner-bottom-img {
+    max-width: 25rem;
   }
 
-  .banner::after {
-    bottom: -15%;
+  .banner-top-img {
+    top: -10%;
   }
 
-  .banner::before,
-  .banner::after {
-    width: 30rem;
-    height: 25rem;
+  .banner-bottom-img {
+    bottom: -10%;
   }
 }
 
