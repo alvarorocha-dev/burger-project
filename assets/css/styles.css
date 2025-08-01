@@ -748,7 +748,7 @@ Banner
 
 .banner-top-img {
   top: -5%;
-  left: 0;
+  left: 1%;
 }
 
 .banner-bottom-img {
@@ -1030,7 +1030,8 @@ Newsletter
 }
 
 .news-img-container {
-  width: 35%;
+  width: 70%;
+  max-width: 30rem;
 }
 
 #newsletter p {
@@ -1049,7 +1050,7 @@ Newsletter
 }
 
 #news-form label {
-  font: 400 1.6rem/1.5 var(--first-ff);
+  font: 500 1.6rem/1.5 var(--first-ff);
 }
 
 #news-form .btn {
@@ -1069,8 +1070,8 @@ Newsletter
   box-shadow: var(--light-shadow);
 }
 
-#news-form::placeholder {
-  font: inherit;
+#news-form input::placeholder {
+  font: 400 1.5rem/1.3 var(--first-ff);
 }
 
 .check {
@@ -1091,10 +1092,10 @@ Newsletter
     gap: 3rem;
   }
   .news-img-container {
-    width: 20%;
+    width: 25%;
   }
   .news-content {
-    width: 60%;
+    width: 50%;
   }
 }
 
@@ -1158,8 +1159,12 @@ Footer
 }
 
 .footer {
-  text-align: center;
+  /* text-align: center; */
   padding: 4rem 2rem;
+}
+
+.footer-logo {
+  width: 12rem;
 }
 
 .footer-link {
