@@ -1144,12 +1144,6 @@ Gallery
 
 /*
 =============== 
-Boneco
-===============
-*/
-
-/*
-=============== 
 Footer
 ===============
 */
@@ -1159,35 +1153,67 @@ Footer
 }
 
 .footer {
-  /* text-align: center; */
-  padding: 4rem 2rem;
+  padding: 6rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.footer-column {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
 .footer-logo {
-  width: 12rem;
+  max-width: 12rem;
 }
 
-.footer-link {
+.footer-title {
+  color: var(--text-clr);
+  font-weight: 800;
+  font-size: 1.8rem;
+}
+
+.footer-description {
+  font-weight: 500;
+  max-width: 40ch;
+}
+
+.footer-description span {
+  color: var(--first-clr-dark);
+}
+
+.footer-link,
+.work-link {
   color: var(--white-clr);
-  text-transform: capitalize;
-  padding: 1rem 2rem;
+  padding: 0.3rem 0;
   display: inline-block;
   transition: var(--transition);
+  font-weight: 600;
+}
+
+.work-link span {
+  color: var(--first-clr-dark);
 }
 
 .footer-link:hover {
   color: var(--first-clr-dark);
 }
 
+.footer-link i {
+  font-size: 1.8rem;
+  margin-right: 0.5rem;
+}
+
 .footer-icons {
-  margin: 2.5rem 0;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
 }
 
 .footer-icon {
   color: var(--white-clr);
-  margin: 0 1rem;
+  margin-right: 1.5rem;
   font-size: 2.5rem;
   transition: var(--transition);
 }
@@ -1201,17 +1227,38 @@ Footer
   color: var(--white-clr);
 }
 
-@media screen and (min-width: 768px) {
-  .footer-links {
-    display: flex;
-    text-align: center;
-    justify-content: center;
+@media screen and (min-width: 900px) {
+  .footer {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 2rem 1rem;
   }
+
+  .footer-column {
+    width: 32%;
+  }
+
+  .footer-column-01 {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 1300px) {
+  .footer-column,
+  .footer-column-01 {
+    width: 18%;
+  }
+}
+
+.footer-column-01 {
+  width: 30%;
 }
 
 .credits {
   background: var(--text-clr);
-  padding: 1.5rem 0;
+  padding: 1.5rem;
   text-align: center;
 }
 
